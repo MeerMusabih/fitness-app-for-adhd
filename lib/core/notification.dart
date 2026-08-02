@@ -15,7 +15,7 @@ class NotificationService {
   Future<void> init() async {
     if (_initialized) return;
     tzdata.initializeTimeZones();
-    tz.setLocalLocation(tz.getLocation(_tzName()));
+    _setLocalLocation();
     const android = AndroidInitializationSettings('@mipmap/ic_launcher');
     const ios = DarwinInitializationSettings();
     await _plugin.initialize(settings: const InitializationSettings(android: android, iOS: ios));
@@ -25,14 +25,28 @@ class NotificationService {
     _initialized = true;
   }
 
-  String _tzName() {
+  void _setLocalLocation() {
     final now = DateTime.now();
-    final offset = now.timeZoneOffset.inMinutes;
-    final sign = offset < 0 ? '-' : '+';
-    final h = (offset.abs() ~/ 60).toString().padLeft(2, '0');
-    final m = (offset.abs() % 60).toString().padLeft(2, '0');
-    final fixed = offset.abs() % 60 == 0 ? '' : ':$m';
-    return 'Etc/GMT$sign$h$fixed';
+    final nowMs = now.millisecondsSinceEpoch;
+    final deviceOffsetMs = now.timeZoneOffset.inMilliseconds;
+    final summer = now.add(const Duration(days: 183));
+    final deviceSummerMs = summer.timeZoneOffset.inMilliseconds;
+
+    final locations = tz.timeZoneDatabase.locations.values;
+    final stable = locations.where((loc) =>
+        loc.timeZone(nowMs).offset == deviceOffsetMs &&
+        loc.timeZone(summer.millisecondsSinceEpoch).offset == deviceSummerMs);
+    if (stable.isNotEmpty) {
+      tz.setLocalLocation(stable.first);
+      return;
+    }
+    final any = locations
+        .where((loc) => loc.timeZone(nowMs).offset == deviceOffsetMs);
+    if (any.isNotEmpty) {
+      tz.setLocalLocation(any.first);
+      return;
+    }
+    tz.setLocalLocation(tz.UTC);
   }
 
   tz.TZDateTime _at(int hour, int minute) {
