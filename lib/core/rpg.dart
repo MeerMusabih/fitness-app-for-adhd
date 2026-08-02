@@ -114,6 +114,7 @@ class RpgEngine {
         Achievement(id: 'level_50', title: 'Halfway Legend', description: 'Reach level 50', icon: '🌟', xp: 1000),
         Achievement(id: 'level_100', title: 'Level 100', description: 'Reach the max level', icon: '👑', xp: 5000),
         Achievement(id: 'weight_logged_30', title: 'Scale Watcher', description: 'Log weight 30 times', icon: '⚖️', xp: 150),
+        Achievement(id: 'reforged', title: 'Reforged', description: 'Reach 95% of your transformation', icon: '👑', xp: 500),
       ];
 
   // ---------------- Skills tree ----------------

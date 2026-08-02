@@ -394,6 +394,7 @@ class GameController extends ChangeNotifier {
         _emit(GameEvent(GameEventType.milestone,
             '🎉 Future You milestone: ${m.targetWeight.round()} kg reached!\n\n${m.message}',
             xp: 200));
+        addXp(200, reason: 'Future You milestone');
         addCoins(100, silent: true);
       }
     }
@@ -576,6 +577,8 @@ class GameController extends ChangeNotifier {
           met = level >= 100;
         case 'weight_logged_30':
           met = _s.weightLogCount >= 30;
+        case 'reforged':
+          met = transformationPct >= 95;
       }
       if (met) {
         _s.achievements[i] = a.copyWith(unlocked: true, unlockedAt: DateTime.now());
