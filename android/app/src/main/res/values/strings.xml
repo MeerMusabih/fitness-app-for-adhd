@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Project Reforge</string>
+    <string name="widget_desc_small">Reforge: streak, level, weight and today\'s completion ring.</string>
+    <string name="widget_desc_medium">Reforge: missions, macros, XP bar and quick actions.</string>
+    <string name="widget_desc_large">Reforge: full daily quest board and boss status.</string>
+</resources>

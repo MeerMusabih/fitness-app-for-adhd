@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/medium_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ring_m"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="Completion ring" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_level_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv 1 · 🔥 0 day streak"
+                android:textColor="#4F8CFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/xpbar_m"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="4dp"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#FFC93C"
+                android:progressBackgroundTint="#26FFFFFF" />
+
+            <TextView
+                android:id="@+id/tv_mission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Today's completion: 0%"
+                android:textColor="#F2F5FF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_cal_rem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories left: 2200"
+                android:textColor="#A8B3CF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_protein_rem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Protein: 0/176g"
+                android:textColor="#A8B3CF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water: 0 / 3800ml"
+                android:textColor="#A8B3CF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Every meal is a choice."
+                android:textColor="#FFE07A"
+                android:textSize="11sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_water"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="💧 Water"
+            android:textColor="#2BD67B"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btn_meal"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="🍽️ Meal"
+            android:textColor="#FF8A3D"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btn_workout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="💪 Workout"
+            android:textColor="#4F8CFF"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btn_walk"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="🚶 Walk"
+            android:textColor="#B06BFF"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

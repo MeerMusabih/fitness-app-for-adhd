@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/large_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ring_l"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:contentDescription="Completion ring" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_daily_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Score  0 / 100"
+                android:textColor="#F2F5FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_weight_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Current 110kg · Goal 85kg"
+                android:textColor="#A8B3CF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_transformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0% of transformation"
+                android:textColor="#FFE07A"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_rank_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎖 Bronze Novice · The Beginner"
+                android:textColor="#B06BFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/xpbar_l"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#FFC93C"
+        android:progressBackgroundTint="#26FFFFFF" />
+
+    <TextView
+        android:id="@+id/tv_xp_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level 1 · 0% to next"
+        android:textColor="#FFC93C"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_calories_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔥 0 / 2200 kcal"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+        <ProgressBar
+            android:id="@+id/calbar_l"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progressTint="#FF8A3D"
+            android:progressBackgroundTint="#26FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_protein_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🍗 0 / 176 g protein"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+        <ProgressBar
+            android:id="@+id/proteinbar_l"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progressTint="#2BD67B"
+            android:progressBackgroundTint="#26FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_water_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💧 0 / 3800 ml"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+        <ProgressBar
+            android:id="@+id/waterbar_l"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progressTint="#4F8CFF"
+            android:progressBackgroundTint="#26FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_steps_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏃 0 / 8000 steps"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+        <ProgressBar
+            android:id="@+id/stepsbar_l"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progressTint="#B06BFF"
+            android:progressBackgroundTint="#26FFFFFF" />
+
+        <TextView
+            android:id="@+id/tv_workout_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💪 Workout pending"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_sleep_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌙 0h sleep"
+            android:textColor="#F2F5FF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_boss_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👹 Boss: Sugar Monster"
+            android:textColor="#FF5B5B"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_reminder_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="💧 Drink one more glass to keep your streak alive."
+            android:textColor="#FFE07A"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_quick_log"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="🍽️ Quick Log"
+            android:textColor="#FF8A3D"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btn_coach"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="🤖 AI Coach"
+            android:textColor="#4F8CFF"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>
